@@ -20,7 +20,7 @@ This program converts PCD (Point Cloud Data) files into grid map messages in a R
 1. Clone the repository into your ROS2 workspace:
 
     ```bash
-    git clone https://github.com/yuguangxie/pcd2pgm_ros.git
+    git clone https://github.com/yuguangxie/pcd2pgm_ros2.git
     cd ~/your_ros2_workspace
     colcon build
     ```

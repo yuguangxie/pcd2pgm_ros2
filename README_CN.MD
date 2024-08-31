@@ -20,7 +20,7 @@
 1. 克隆仓库到你的 ROS2 工作区：
 
     ```bash
-    git clone https://github.com/yuguangxie/pcd2pgm_ros.git
+    git clone https://github.com/yuguangxie/pcd2pgm_ros2.git
     cd ~/your_ros2_workspace
     colcon build
     ```
