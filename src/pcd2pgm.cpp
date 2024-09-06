@@ -173,7 +173,9 @@ void SetMapTopicMsg(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud,
   }
 
   msg.info.origin.position.x = x_min;
-  msg.info.origin.position.y = y_min;
+  // msg.info.origin.position.y = y_min;
+  int h = int((y_max - y_min) / map_resolution);
+  msg.info.origin.position.y = y_max - h*map_resolution;
   msg.info.origin.position.z = 0.0;
   msg.info.origin.orientation.w = 1.0;
 
@@ -216,7 +218,7 @@ void SavePGMAndYAML(const nav_msgs::msg::OccupancyGrid &msg,
       }
     }
   }
-
+  cv::flip(image, image, 0); //resolve image mirroring issues
   std::string pgm_file = directory + name + ".pgm";
   cv::imwrite(pgm_file, image);
   RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Saved PGM file: %s", pgm_file.c_str());
