@@ -1,3 +1,5 @@
+
+
 # PCD to Grid Map Conversion and Saving as PGM and YAML Files
 
 This program converts PCD (Point Cloud Data) files into grid map messages in a ROS2 environment and publishes them on a specified ROS2 topic. Additionally, the program supports saving the grid map directly as a PGM image file and a corresponding YAML metadata file.
@@ -17,12 +19,11 @@ This program converts PCD (Point Cloud Data) files into grid map messages in a R
 
 ## Installation
 
-1. Clone the repository into your ROS2 workspace:
+1. Clone the repository into your ROS2 workspace `src` directory:
 
     ```bash
     git clone https://github.com/yuguangxie/pcd2pgm_ros2.git
-    cd ~/your_ros2_workspace
-    colcon build
+    cd ~/your_ros2_workspace/src
     ```
 
 2. Build the workspace:
